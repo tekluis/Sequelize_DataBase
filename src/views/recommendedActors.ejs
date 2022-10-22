@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Películas ordenas por fecha</title>
+    <title>Actores ordenados por rating</title>
     <link rel='stylesheet' href='/css/style.css' />
 </head>
 <body>
@@ -12,12 +12,16 @@
             <img src="/img/logo-DH.png" alt="Logo Digital House">
         </a>
     </figure>
-    <h1>PELIÍCULAS ORDENADASR FECHA</h1>
+    <h1>ACTORES ORDENADOS POR RATING</h1>
     <ul>
-        <% for( let i = 0; i < movies.length; i++ ) { %>
+        <% for( let i = 0; i < actors.length; i++ ) { %>
         <li>
-            <a href="/movies/detail/<%=movies[i].id%>"><%= movies[i].title %> </a> <br>
-            <%= 'RELEASE DATE: ' + movies[i].release_date %> 
+            <a href="/actors/detail/<%=actors[i].id%>">
+                <%= actors[i].last_name %> 
+                <%= actors[i].first_name %> 
+            </a> 
+            <br>
+            <%= 'RATING: ' + actors[i].rating %>  
         </li>
         <br>
         <% } %>

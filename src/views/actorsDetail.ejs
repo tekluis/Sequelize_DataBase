@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= movie.title %> </title>
+    <title><%= actor.last_name %> </title>
     <link rel='stylesheet' href='/css/style.css' />
 
 </head>
@@ -13,12 +13,11 @@
         <img src="/img/logo-DH.png" alt="Logo Digital House">
         </a>
     </figure>
-    <h1><%= movie.title %> </h1>    
+    <h1>APELLIDO: <%= actor.last_name %> </h1>    
     <br>
-    <p>RATING: <%= movie.rating %> </p>
-    <p>AWARDS: <%= movie.awards %> </p>
-    <p>LENGTH: <%= movie.length + ' min'%> </p>
-    <p>RELEASE DATE: <%= movie.release_date %> </p>
+    <p>NOMBRE: <%= actor.first_name %> </p>    
+    <p>RATING: <%= actor.rating %> </p>
+    <p>PELICULA FAV: <%= actor.favorite_movie_id %> </p>
 
 </body>
 </html>
